@@ -1,0 +1,129 @@
+body{
+    background-color: darkkhaki;
+}
+.header{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: solid black 2px;
+    background-image: url(header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+he{
+    font-size: xx-large;
+    font-style: oblique;
+    color: red;
+}
+#autko{
+   position: absolute;
+   left: 80px;
+}
+#select{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.row{
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+.auto{
+    border: solid black 5px;
+    width: 50%;
+    height: 25vh;
+    display: flex;
+    
+}
+.obraz{
+    display: flex;
+    justify-content: space-between
+}
+tx{
+    color: aqua;
+    font-size: 1.5vw;
+}
+.obraz > img{
+      width: 100%;
+      height: auto;
+}
+.tekst{
+    border: solid rebeccapurple 2px;
+    background-color: chocolate;
+    width: auto;
+}
+.view{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+.back{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+button{
+  width: 60px;
+  color: darkred;
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#poziom{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.okno{
+    width: 90%;
+    align-self: center;
+    border: solid black 2px;
+    height: 80vh;
+    display: none;
+    justify-content: space-evenly;
+}
+.opis{
+    border: solid red 5px;  
+    width: 50%; 
+}
+.okno > img{
+    width: 40%;
+}
+.eska{
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.rmf{
+    width: 20px;
+    height: 20px;
+}
+.cena{
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+}
+.dane{
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.acces{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.col{
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+}

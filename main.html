@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skup Aut</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+    <style>
+        [class *= "button"]{
+            width: 60px;
+            border: black solid 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div id="autko"> <img src="autko.png"></div>
+        <he>SKLEP AUT</he>
+    </div>
+    <div id="select">
+    <label for="cars">Wybierz markę samochodu: </label>
+
+  <select name="cars" id="cars" onchange="selection()">
+    <option value="all">Wszystko</option>
+    <option value="volvo">Volvo</option>
+    <option value="volkswagen">Volkswagen</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </select>
+    </div> <br>
+    <div class="view">
+    <div class="cars audi">
+        <div class="row">
+            <div class="back">
+              <div class="auto">
+                  <div class="obraz"><img src="audia6.webp" alt=""></div>
+                  <div class="tekst">
+                    <tx>
+                        Audi A6 3.2 FSI Quattro Tiptr
+                        2007
+                        przebieg 244 000 km
+                        moc silnika 255 KM
+                        234 829 PLN
+                    </tx>
+                  </div>
+                </div>
+                <div id="b1"><button onclick="press('f1')">Zamów</button></div>
+            </div>
+            <div class="back">
+              <div class="auto">
+                <div class="obraz"><img src="audir8.webp"></div>
+                <div class="tekst">
+                    <tx>
+                        Audi R8 5.2 FSI Quattro Plus 2016
+                        przebieg 69 000 km
+                        moc silnika 611 KM
+                        528 900 PLN
+                         
+                    </tx>
+                </div>
+              </div>
+              <div id="b2"><button onclick="press('f2')">Zamów</button></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cars volkswagen">
+        <div class="row">
+            <div class="back">
+              <div class="auto">
+                  <div class="obraz"><img src="volk1.8.webp" alt=""></div>
+                  <div class="tekst">
+                    <tx>
+                        Volkswagen Passat 1.8 T 2002 przebieg 314KM moc silnika 150KM
+                        12 852 PLN
+                    </tx>
+                  </div>
+                </div>
+                <div id="b3"><button onclick="press('f3')">Zamów</button></div>
+              </div>
+              <div class="back">
+              <div class="auto">
+                <div class="obraz"><img src="touran.webp"></div>
+                <div class="tekst">
+                    <tx>
+                        Volkswagen Touran 2019 przebieg 102000KM moc silnika 115KM
+                        75 000 PLN
+                         
+                    </tx>
+                </div>
+              </div>
+              <div id="b4"><button onclick="press('f4')">Zamów</button></div>
+              </div>
+        </div>
+    </div>
+
+    <div class="cars volvo">
+        <div class="row">
+            <div class="back">
+              <div class="auto">
+                  <div class="obraz"><img src="volvos40.webp" alt=""></div>
+                  <div class="tekst">
+                    <tx>
+                        Volvo S40 1.6D 2009 przebieg 240000km moc silnika 104 km
+                        8 750 PLN
+                    </tx>
+                  </div>
+                </div>
+                <div id="b5"><button onclick="press('f5')">Zamów</button></div>
+              </div>
+              <div class="back">
+              <div class="auto">
+                <div class="obraz"><img src="s60.webp"></div>
+                <div class="tekst">
+                    <tx>
+                        Volvo s60 2002 przebieg 371000KM moc 163KM 10 500 PLN
+                         
+                    </tx>
+                </div>
+              </div>
+              <div id="b6"><button onclick="press('f6')">Zamów</button></div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="cars mercedes">
+        <div class="row">
+            <div class="back">
+              <div class="auto">
+                  <div class="obraz"><img src="red.webp" alt=""></div>
+                  <div class="tekst">
+                    <tx> 
+                        Mercedes-Benz W201 1990 Przebieg 320 000 km moc silnika 75 km 11 900 PLN
+
+                    </tx>
+                  </div>
+                </div>
+                <div id="b7"><button onclick="press('f7')">Zamów</button></div>
+              </div>
+              <div class="back">
+              <div class="auto">
+                <div class="obraz"><img src="cla.webp"></div>
+                <div class="tekst">
+                    <tx>
+                        Mercedes-Benz CLA 2015
+                        Przebieg 177 000 km
+                        moc silnika 105 KM
+                        75 000 PLN
+
+                         
+                    </tx>
+                </div>
+              </div>
+              <div id="b8"><button onclick="press('f8')">Zamów</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="poziom">
+  <div class="okno" id="f1">
+     <img src="audia6.webp">
+     <div class="opis">
+      <div class="cena" value="234829">CENA: 234 829 PLN</div>
+       <div class="eska">
+        <label><input type="radio" name="ra" class="rmf">Leasing</label>
+        <label><input type="radio" name="ra" class="rmf">Gotówka</label>
+       </div>
+       <div class="dane">
+        Imie:<input type="text" name="imie" class="pasek" size="15" id="imie">
+        Nazwisko:<input type="text" name="imie" class="pasek" size="15" id="nazwisko">
+       </div>
+       <div class="acces">
+        <label>Koła zimowe + 2000 zł <input type="checkbox" name="zimowe"></label>
+        <label>Szyberdach + 12000 zł <input type="checkbox" name="szyb" ></label>
+        <label>Lakier + 400 zł <input type="checkbox" name="lakier" ></label>
+        <div class="col">
+            <button onclick="exit()">Powrót</button>
+            <button onclick="buy('f1')">Zakup</button>
+        </div>
+       </div>
+     </div>
+  </div>
+  <div class="okno" id="f2">
+    <img src="audir8.webp">
+    <div class="opis">
+     <div class="cena" value="234829">CENA: 528 900 PLN</div>
+      <div class="eska">
+       <label><input type="radio" name="ra" class="rmf">Leasing</label>
+       <label><input type="radio" name="ra" class="rmf">Gotówka</label>
+      </div>
+      <div class="dane">
+       Imie:<input type="text" name="imie" class="pasek" size="15" id="imie">
+       Nazwisko:<input type="text" name="imie" class="pasek" size="15" id="nazwisko">
+      </div>
+      <div class="acces">
+       <label>Koła zimowe + 2000 zł <input type="checkbox" name="zimowe"></label>
+       <label>Szyberdach + 12000 zł <input type="checkbox" name="szyb" ></label>
+       <label>Lakier + 400 zł <input type="checkbox" name="lakier" ></label>
+       <div class="col">
+           <button onclick="exit()">Powrót</button>
+           <button onclick="buy('f1')">Zakup</button>
+       </div>
+      </div>
+    </div>
+ </div>
+  <div class="okno" id="f3">
+    <img src="volk1.8.webp">
+    <div class="opis">
+     <div class="cena" value="234829">CENA: 12 852 PLN</div>
+      <div class="eska">
+       <label><input type="radio" name="ra" class="rmf">Leasing</label>
+       <label><input type="radio" name="ra" class="rmf">Gotówka</label>
+      </div>
+      <div class="dane">
+       Imie:<input type="text" name="imie" class="pasek" size="15" id="imie">
+       Nazwisko:<input type="text" name="imie" class="pasek" size="15" id="nazwisko">
+      </div>
+      <div class="acces">
+       <label>Koła zimowe + 2000 zł <input type="checkbox" name="zimowe"></label>
+       <label>Szyberdach + 12000 zł <input type="checkbox" name="szyb" ></label>
+       <label>Lakier + 400 zł <input type="checkbox" name="lakier" ></label>
+       <div class="col">
+           <button onclick="exit()">Powrót</button>
+           <button onclick="buy('f2')">Zakup</button>
+       </div>
+      </div>
+    </div>
+ </div>
+ <div class="okno" id="f4">
+  <img src="touran.webp">
+  <div class="opis">
+   <div class="cena" value="234829">CENA: 75 000 PLN</div>
+    <div class="eska">
+     <label><input type="radio" name="ra" class="rmf">Leasing</label>
+     <label><input type="radio" name="ra" class="rmf">Gotówka</label>
+    </div>
+    <div class="dane">
+     Imie:<input type="text" name="imie" class="pasek" size="15" id="imie">
+     Nazwisko:<input type="text" name="imie" class="pasek" size="15" id="nazwisko">
+    </div>
+    <div class="acces">
+     <label>Koła zimowe + 2000 zł <input type="checkbox" name="zimowe"></label>
+     <label>Szyberdach + 12000 zł <input type="checkbox" name="szyb" ></label>
+     <label>Lakier + 400 zł <input type="checkbox" name="lakier" ></label>
+     <div class="col">
+         <button onclick="exit()">Powrót</button>
+         <button onclick="buy('f2')">Zakup</button>
+     </div>
+    </div>
+  </div>
+ </div> 
+  <div class="okno" id="f5">
+    <img src="volvos40.webp">
+    <div class="opis">
+     <div class="cena" value="234829">CENA: 8 750 PLN</div>
+      <div class="eska">
+       <label><input type="radio" name="ra" class="rmf">Leasing</label>
+       <label><input type="radio" name="ra" class="rmf">Gotówka</label>
+      </div>
+      <div class="dane">
+       Imie:<input type="text" name="imie" class="pasek" size="15" id="imie">
+       Nazwisko:<input type="text" name="imie" class="pasek" size="15" id="nazwisko">
+      </div>
+      <div class="acces">
+       <label>Koła zimowe + 2000 zł <input type="checkbox" name="zimowe"></label>
+       <label>Szyberdach + 12000 zł <input type="checkbox" name="szyb" ></label>
+       <label>Lakier + 400 zł <input type="checkbox" name="lakier" ></label>
+       <div class="col">
+           <button onclick="exit()">Powrót</button>
+           <button onclick="buy('f5')">Zakup</button>
+       </div>
+      </div>
+    </div>
+ </div>
+ <div class="okno" id="f6">
+  <img src="s60.webp">
+  <div class="opis">
+   <div class="cena" value="234829">CENA: 10 500 PLN</div>
+    <div class="eska">
+     <label><input type="radio" name="ra" class="rmf">Leasing</label>
+     <label><input type="radio" name="ra" class="rmf">Gotówka</label>
+    </div>
+    <div class="dane">
+     Imie:<input type="text" name="imie" class="pasek" size="15" id="imie">
+     Nazwisko:<input type="text" name="imie" class="pasek" size="15" id="nazwisko">
+    </div>
+    <div class="acces">
+     <label>Koła zimowe + 2000 zł <input type="checkbox" name="zimowe"></label>
+     <label>Szyberdach + 12000 zł <input type="checkbox" name="szyb" ></label>
+     <label>Lakier + 400 zł <input type="checkbox" name="lakier" ></label>
+     <div class="col">
+         <button onclick="exit()">Powrót</button>
+         <button onclick="buy('f2')">Zakup</button>
+     </div>
+    </div>
+  </div>
+  </div>
+  <div class="okno" id="f7">
+    <img src="red.webp">
+    <div class="opis">
+     <div class="cena" value="234829">CENA: 11 900 PLN</div>
+      <div class="eska">
+       <label><input type="radio" name="ra" class="rmf">Leasing</label>
+       <label><input type="radio" name="ra" class="rmf">Gotówka</label>
+      </div>
+      <div class="dane">
+       Imie:<input type="text" name="imie" class="pasek" size="15" id="imie">
+       Nazwisko:<input type="text" name="imie" class="pasek" size="15" id="nazwisko">
+      </div>
+      <div class="acces">
+       <label>Koła zimowe + 2000 zł <input type="checkbox" name="zimowe"></label>
+       <label>Szyberdach + 12000 zł <input type="checkbox" name="szyb" ></label>
+       <label>Lakier + 400 zł <input type="checkbox" name="lakier" ></label>
+       <div class="col">
+           <button onclick="exit()">Powrót</button>
+           <button onclick="buy('f2')">Zakup</button>
+       </div>
+      </div>
+    </div>
+ </div>
+ <div class="okno" id="f8">
+  <img src="cla.webp">
+  <div class="opis">
+   <div class="cena" value="234829">CENA: 75 000 PLN</div>
+    <div class="eska">
+     <label><input type="radio" name="ra" class="rmf">Leasing</label>
+     <label><input type="radio" name="ra" class="rmf">Gotówka</label>
+    </div>
+    <div class="dane">
+     Imie:<input type="text" name="imie" class="pasek" size="15" id="imie">
+     Nazwisko:<input type="text" name="imie" class="pasek" size="15" id="nazwisko">
+    </div>
+    <div class="acces">
+     <label>Koła zimowe + 2000 zł <input type="checkbox" name="zimowe"></label>
+     <label>Szyberdach + 12000 zł <input type="checkbox" name="szyb" ></label>
+     <label>Lakier + 400 zł <input type="checkbox" name="lakier" ></label>
+     <div class="col">
+         <button onclick="exit()">Powrót</button>
+         <button onclick="buy('f2')">Zakup</button>
+     </div>
+    </div>
+  </div>  
+</div>
+</div>
+</body>
+</html>
